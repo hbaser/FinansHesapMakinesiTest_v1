@@ -1,3 +1,5 @@
+
+@test
 Feature:  Kullanici Girisi
 
   Scenario: Gecerli kullanici bilgileri ile giris yapma
