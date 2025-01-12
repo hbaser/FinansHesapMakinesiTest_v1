@@ -117,4 +117,16 @@ public class CalculatorPage extends BrowserDriver {
         assertEquals("105",checkResultCs1);
     }
 
+    public static void chResultCs0() throws InterruptedException{
+        Thread.sleep(2000);
+        String checkResultCs0 = driver.findElement(By.xpath(check_result_xpath)).getText();
+        assertEquals("0",checkResultCs0);
+    }
+
+    public static void chResultCs200() throws InterruptedException{
+        Thread.sleep(2000);
+        String checkResultCs200 = driver.findElement(By.xpath(check_result_xpath)).getText();
+        assertEquals("200",checkResultCs200);
+    }
+
 }
