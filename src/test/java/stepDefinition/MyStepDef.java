@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static pages.LoginPage.*;
+import static pages.OpenCalculatorPage.check_Calculator;
 import static pages.OpenCalculatorPage.click_openCalculatorButton;
 
 public class MyStepDef {
@@ -45,6 +46,7 @@ public class MyStepDef {
 
     @Then("Hesap makinesi ekrani gorunur")
     public void hesapMakinesiEkraniGorunur() throws InterruptedException {
+        check_Calculator();
 
     }
 
