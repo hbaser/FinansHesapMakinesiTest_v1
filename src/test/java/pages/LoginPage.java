@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import utility.BrowserDriver;
 
 import static org.junit.Assert.assertEquals;
+import static pages.OpenCalculatorPage.openCalculatorButton_xpath;
 
 public class LoginPage extends BrowserDriver {
 
@@ -28,6 +29,9 @@ public class LoginPage extends BrowserDriver {
         Thread.sleep(2000);
         driver.findElement(By.xpath(username_xpath)).click();
         driver.findElement(By.xpath(username_xpath)).sendKeys("hakan.baser");
+        Thread.sleep(2000);
+        String assertUsername = driver.findElement(By.xpath(username_xpath)).getAttribute("value");
+        assertEquals("hakan.baser", assertUsername);
 
     }
 
@@ -39,6 +43,12 @@ public class LoginPage extends BrowserDriver {
     public static void click_login() throws InterruptedException{
         Thread.sleep(2000);
         driver.findElement(By.xpath(loginButton_xpath)).click();
+    }
+
+    public static void check_openCalculatorButton() throws InterruptedException{
+        Thread.sleep(2000);
+        String checkOpenCalButton = driver.findElement(By.xpath(openCalculatorButton_xpath)).getText();
+        assertEquals("OPEN CALCULATOR",checkOpenCalButton);
     }
 
 }
