@@ -12,12 +12,12 @@ import static pages.OpenCalculatorPage.*;
 public class MyStepDef {
 
     @Given("Kullanici login sayfasini acar")
-    public void kullanici_login_sayfasini_acar() throws InterruptedException{
+    public void kullanici_login_sayfasini_acar() throws InterruptedException {
         open_link();
     }
 
     @When("Kullanici kullanici adini girer")
-    public void kullaniciKullaniciAdiniGirer()throws InterruptedException {
+    public void kullaniciKullaniciAdiniGirer() throws InterruptedException {
         enter_username();
     }
 
@@ -40,7 +40,7 @@ public class MyStepDef {
     }
 
     @When("Kullanici open calculator butonuna tiklar")
-    public void kullaniciOpenCalculatorButonunaTiklar() throws InterruptedException{
+    public void kullaniciOpenCalculatorButonunaTiklar() throws InterruptedException {
         click_openCalculatorButton();
     }
 
@@ -66,7 +66,7 @@ public class MyStepDef {
     }
 
     @When("Kullanici 100 degerini girer")
-    public void kullaniciDegeriniGirer() throws InterruptedException {
+    public void kullanici100DegeriniGirer() throws InterruptedException {
         click_number1();
         click_number0();
         click_number0();
@@ -78,7 +78,7 @@ public class MyStepDef {
     }
 
     @And("Kullanici 1,05 faiz oranini girer")
-    public void kullaniciFaizOraniniGirer() throws InterruptedException {
+    public void kullanici105FaizOraniniGirer() throws InterruptedException {
         click_number1();
         click_ondalik();
         click_number0();
@@ -88,12 +88,52 @@ public class MyStepDef {
     }
 
     @Then("Ekranda sonuc 105 olmalidir")
-    public void ekrandaSonucOlmalidir() throws InterruptedException {
+    public void ekrandaSonuc105Olmalidir() throws InterruptedException {
         chResultCs1();
     }
 
     @And("Kullanici cikis yapar")
     public void kullaniciCikisYapar() throws InterruptedException {
         click_cikis();
+    }
+
+    @When("Kullanici 1000 gelir degerini girer")
+    public void kullaniciGelir1000DegeriniGirer() throws InterruptedException {
+        click_number1();
+        click_number0();
+        click_number0();
+        click_number0();
+
+    }
+
+    @And("Kullanici cikarma islemini secer")
+    public void kullaniciCikarmaIsleminiSecer() throws InterruptedException {
+        click_cikar();
+    }
+
+    @And("Kullanici 800 gider degerini girer")
+    public void kullaniciGider800DegeriniGirer() throws InterruptedException {
+        click_number8();
+        click_number0();
+        click_number0();
+        click_esittir();
+    }
+
+    @Then("Ekranda sonuc 200 olmalidir")
+    public void ekrandaSonuc200Olmalidir() throws InterruptedException {
+        chResultCs200();
+    }
+
+    @When("Kullanıcı 1000 gelir değerini girer")
+    public void kullanici1000GelirDegeriniGirer() throws InterruptedException {
+        click_number1();
+        click_number0();
+        click_number0();
+        click_number0();
+    }
+
+    @Then("Ekranda sonuç 0 olmalıdır")
+    public void ekrandaSonuc0Olmalidir() throws InterruptedException {
+        chResultCs0();
     }
 }
